@@ -32,7 +32,7 @@ if grep -q "nserv" "$strBashrc";
 then
 	echo "Alias exists."
 else
-	echo alias nserv=\"nmap -p 1-65535 -sV -sS -T3\" >> $strBashrc
+	echo alias nserv=\"nmap -p- -sV -sS -T3 -A\" >> $strBashrc
 fi
 
 if grep -q "nall" "$strBashrc";
