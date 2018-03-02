@@ -25,7 +25,7 @@ if grep -q "sweep" "$strBashrc";
 then
 	echo "Alias exists."
 else
-	echo alias sweep=\"nmap -sP\" >> $strBashrc
+	echo alias nsweep=\"nmap -sP\" >> $strBashrc
 fi
 
 if grep -q "nserv" "$strBashrc";
