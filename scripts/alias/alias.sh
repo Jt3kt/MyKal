@@ -42,6 +42,12 @@ else
 	echo alias nall=\"nmap -v -sS -A -T3\" >> $strBashrc
 fi
 
+if grep -q "nlisten" "$strBashrc";
+then
+	echo "Alias exists.
+else
+	echo alias nlisten=\"nc -lvp\" >> $strBashrc
+fi 
 
 #reload .bashrc
 source ~/.bashrc
