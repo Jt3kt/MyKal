@@ -56,6 +56,13 @@ else
 	echo alias nlist added, use xxx
 fi 
 
+if grep -q "rankwordlists" "$strBashrc";
+then
+	echo "Alias exists."
+else
+	echo alias rankwordlists=\'wc -l /usr/share/wordlists/* \| sort -rn\' >> $strBashrc
+fi
+
 #reload .bashrc
 . ~/.bashrc
 exec bash
