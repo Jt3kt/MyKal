@@ -70,6 +70,20 @@ else
 	echo alias cherrytree=\"nohup /root/Downloads/cherrytree-0.38.5/cherrytree \> /dev/null \& \" >> $strBashrc
 fi
 
+if grep -q "htb" "$strBashrc";
+then
+        echo "Alias htb - HacktheBox exists."
+else
+        echo alias htb=\"nohup openvpn /root/Nextcloud/Kali/config/htb/Jtekt.ovpn \& \" >> $strBashrc
+fi
+
+if grep -q "disc" "$strBashrc";
+then
+        echo "Alias disc - Disconnect VPN exists."
+else
+        echo alias disc=\"killall -15 openvpn\" >> $strBashrc
+fi
+
 #reload .bashrc
 . ~/.bashrc
 exec bash
