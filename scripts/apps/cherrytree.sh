@@ -7,4 +7,4 @@ else
         tar xf /root/Downloads/$file1.tar.xz  -C /root/Downloads/
 
 fi
-/root/Downloads/cherrytree-0.38.5/cherrytree ~/Nextcloud/Kali/notebooks/my_notes/jtekt_notes.ctb &
+nohup sh -c /root/Downloads/cherrytree-0.38.5/cherrytree ~/Nextcloud/Kali/notebooks/my_notes/jtekt_notes.ctb > /dev/null &
