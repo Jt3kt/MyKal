@@ -44,7 +44,7 @@ if grep -q "nall" "$strBashrc";
 then
 	echo "Alias nall exists."
 else
-	echo alias nall=\"nmap -v -sS -A -T3\" >> $strBashrc
+	echo alias nall=\"nmap -v -p- -sS -A -T3\" >> $strBashrc
 	echo alias nall added, use xxxx
 fi
 
